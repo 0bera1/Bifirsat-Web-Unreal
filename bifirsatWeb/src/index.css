@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background: linear-gradient(135deg, #ffffff, #ffdd004d); /* Beyazdan açık griye geçiş */
+  background-image: 
+    radial-gradient(circle, rgb(255, 230, 0.05) 2px, transparent 2px), 
+    radial-gradient(circle, rgba(255, 230, 0, 0.05) 3px, transparent 3px);
+  background-size: 50px 50px; /* Dairelerin boyutunu ayarlayın */
+  height: 100vh;
+  margin: 0;
+  color: #333;
+}
+
