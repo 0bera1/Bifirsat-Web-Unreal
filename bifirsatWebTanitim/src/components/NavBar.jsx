@@ -30,23 +30,23 @@ function NavBar() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-white/20 rounded-lg backdrop-blur-2xl shadow-xl flex justify-between items-center h-16 max-w-[1500px] px-8 md:px-36 mx-auto z-50">
+    <nav className="fixed top-0 left-0 right-0 bg-white/20 rounded-lg backdrop-blur-lg shadow-xl flex justify-between items-center h-16 max-w-[1500px] px-8 md:px-36 mx-auto z-50">
       {/* Logo Section */}
-      <div className="flex items-center space-x-3">
+      <div className="flex items-center justify-center space-x-5">
         <img src={icon} className="h-10 w-10 animate-bounce-slow" alt="icon" />
-        <h1 className="text-2xl font-bold text-white hover:text-yellow-400 transition duration-300">
+        <h1 className="text-2xl font-bold text-white hover:text-gray-700 transition scale-110 hover:scale-125  duration-300">
           BiFırsat.
         </h1>
       </div>
 
       {/* Desktop Navigation */}
-      <div className="hidden md:flex space-x-6">
+      <div className="hidden md:flex space-x-8">
         {navItems.map((item) => (
           <Link
             key={item.id}
             to={item.to}
             smooth={true}
-            className="text-white font-medium text-lg hover:text-yellow-900 transition duration-300 cursor-pointer"
+            className="text-white font-medium text-lg   hover:shadow-yellow-900 hover:text-yellow-900 transition duration-300 hover:scale-110 cursor-pointer"
           >
             {item.text}
           </Link>
