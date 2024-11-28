@@ -24,13 +24,13 @@ function NavBar() {
   const navItems = [
     { id: 1, text: "Hakkımızda", to: "hakkimizda" },
     { id: 2, text: "Biz Kimiz?", to: "bizkimiz" },
-    { id: 3, text: "Misyonumuz", to: "misyon" },
+    { id: 3, text: "Partnerimiz Olun", to: "partner" },
     { id: 4, text: "İletişim", to: "iletisim" },
     { id: 5, text: "Mobil Uygulamamız", to: "mobiluygulama" },
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-white/20 rounded-3xl backdrop-blur-2xl shadow-xl flex justify-between items-center h-20 max-w-[1500px] px-8 md:px-16 mx-auto z-50">
+    <nav className="fixed top-0 left-0 right-0 bg-white/20 rounded-lg backdrop-blur-2xl shadow-xl flex justify-between items-center h-16 max-w-[1500px] px-8 md:px-36 mx-auto z-50">
       {/* Logo Section */}
       <div className="flex items-center space-x-3">
         <img src={icon} className="h-10 w-10 animate-bounce-slow" alt="icon" />
