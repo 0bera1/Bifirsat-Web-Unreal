@@ -77,32 +77,32 @@ function HeroSection() {
         </div>
 
         {/* Linkler */}
-        <div className="items-center justify-center sm:flex-row space-y-6 sm:space-y-0 sm:space-x-14">
+        <div className="items-center lg:pt-0 pt-4 justify-center sm:flex-row space-y-6 sm:space-y-0 sm:space-x-14">
           
-          <div className="mx-32">
-          <h3 className=" ml-1  text-white text-xl sm:text-lg tracking-widest">
+          <div className=" items-center justify-center flex flex-col">
+          <h3 className=" lg:ml-1  text-white lg:text-xl text-sm tracking-widest">
             Tüm indirimler tek bir platformda !
           </h3>
 
           <motion.p
-            className="text-xl ml-28 font-medium  text-white mb-7"
+            className="text-xl  font-medium items-center justify-center flex text-white lg:mb-7"
             style={{ zIndex: -1 }}
             initial={{ opacity: 0 }}
             animate={controls}
           >
-            <span className="text-yellow-500 text-2xl font-bold">
+            <span className="text-yellow-500 text-lg lg:text-2xl font-bold">
               {roles[currentIndex]}
             </span>
           </motion.p>
           </div>
           
-          <div className="flex flex-col sm:flex-row space-y-6 sm:space-y-0 sm:space-x-14">
+          <div className="flex flex-col sm:flex-row space-y-6 sm:space-y-0 lg:space-x-14">
           {bTo.map((item) => (
               <Link
                 key={item.id}
                 to={item.to}
                 smooth={true}
-                className="relative group text-lg font-bold text-white bg-yellow-500 px-6 py-3 
+                className="relative text-lg font-bold text-white bg-yellow-500 px-6 py-3 
                 rounded-lg overflow-hidden shadow-lg cursor-pointer transition-all duration-500"
               >
                 <span
@@ -110,7 +110,7 @@ function HeroSection() {
                 transition-all duration-700 ease-out transform -translate-x-1/2 -translate-y-1/2 
                 top-1/2 left-1/2"
                 ></span>
-                <span className="relative">{item.text}</span>
+                <span className="relative text-base">{item.text}</span>
               </Link>
             ))}
           </div>

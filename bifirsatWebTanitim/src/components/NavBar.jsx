@@ -70,9 +70,9 @@ function NavBar() {
       <div className="md:hidden relative">
         <button onClick={toggleMenu} className="text-3xl text-gray-500">
           {isOpen ? (
-            <IoMdRemoveCircleOutline color="#7f7f2b" />
+            <IoMdRemoveCircleOutline color="#1a1a1a" />
           ) : (
-            <IoIosMenu color="#afaf87" />
+            <IoIosMenu color="#1a1a1a" />
           )}
         </button>
 

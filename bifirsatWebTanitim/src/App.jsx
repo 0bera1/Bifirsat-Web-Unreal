@@ -14,10 +14,8 @@ import FooterB from "./components/FooterB";
 function App() {
   const [isVisible, setIsVisible] = useState(false);
 
-  // Scroll konumunu kontrol et
   useEffect(() => {
     const handleScroll = () => {
-      // Sayfanın en üst kısmında değilse butonu göster
       if (window.scrollY > 0) {
         setIsVisible(true);
       } else {
@@ -25,45 +23,41 @@ function App() {
       }
     };
 
-    // Scroll event'ini dinle
     window.addEventListener("scroll", handleScroll);
-
-    // Cleanup
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
     <>
-      <div id="top" className="  overflow-hidden">
+      <div id="top" className="overflow-hidden">
         <NavBar />
         <div className="mb-36 bg-[#ffbf00]">
           <HeroSection />
         </div>
         <div
           id="hakkimizda"
-          className="items-center lg:mx-52  my-10 justify-center"
+          className="flex flex-col items-center px-4 md:px-8 lg:px-16 xl:mx-52 my-10"
         >
           <Hakkinda />
           {isVisible && (
             <Link to="top" smooth={true}>
-              <FaAngleDoubleUp className="text-5xl transition-all duration-500 p-2 text-yellow-500 bg-none hover:bg-yellow-500 hover:text-[#1a1a1a] rounded-full  fixed bottom-10 right-10 cursor-pointer" />
+              <FaAngleDoubleUp className="text-5xl transition-all duration-500 p-2 text-yellow-500 bg-none hover:bg-yellow-500 hover:text-[#1a1a1a] rounded-full fixed bottom-10 right-10 cursor-pointer" />
             </Link>
           )}
         </div>
         <BifirsatNasilCalisir />
         <div
-          className="mt-96 mb-96 bg-transparent  lg:w-auto lg:h-auto h-[800px] w-full 
-       lg:mx-32 rounded-3xl items-center justify-center px-2 lg:border-2 lg:border-black py-16 lg:bg-[#ffbf00]/90 lg:backdrop-blur-xl 
-       lg:shadow-2xl "
+          className="mt-96 mb-96 bg-transparent w-full lg:w-auto h-[800px] lg:h-auto lg:mx-32 rounded-3xl items-center justify-center px-4 md:px-8 lg:px-16 lg:py-16 py-10 lg:border-2 lg:border-black lg:bg-[#ffbf00]/90 lg:backdrop-blur-xl lg:shadow-2xl"
         >
           <MobilUygulama />
         </div>
-        <div className="px-40 py-40 bg-[#ffbf00]">
-        <BizKimiz />
+        <div className="px-4 md:px-8 lg:px-40 py-20 lg:py-40 bg-[#ffbf00]">
+          <BizKimiz />
         </div>
         <SizeUlasalim />
-        <FooterB/>
+        <FooterB />
       </div>
     </>
   );
