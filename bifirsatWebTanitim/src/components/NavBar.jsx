@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-scroll";
-import { IoIosArrowDropright, IoIosArrowDropleft } from "react-icons/io";
+import { IoMdRemoveCircleOutline, IoIosMenu } from "react-icons/io";
 import "./NavBar.css";
 import icon from "../assets/icon.png";
 
@@ -30,23 +30,35 @@ function NavBar() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-white/20 rounded-lg backdrop-blur-lg shadow-xl flex justify-between items-center h-16 max-w-[1500px] px-8 md:px-36 mx-auto z-50">
+    <nav
+      className="fixed top-0 left-0 right-0 bg-white/20 rounded-lg backdrop-blur-lg shadow-xl flex justify-between items-center h-20 
+    max-w-full px-8 md:px-36 mx-auto z-50"
+    >
       {/* Logo Section */}
-      <div className="flex items-center justify-center space-x-5">
+      <Link
+        to="top"
+        smooth={true}
+        className="flex items-center justify-center space-x-5"
+      >
         <img src={icon} className="h-10 w-10 animate-bounce-slow" alt="icon" />
-        <h1 className="text-2xl font-bold text-white hover:text-gray-700 transition scale-110 hover:scale-125  duration-300">
-          BiFırsat.
+        <h1
+          className="text-2xl font-bold text-white  transition scale-110 hover:scale-125  duration-300 relative hover:text-yellow-400 
+           after:bg-yellow-600 after:absolute after:h-[0.5px] after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all 
+           after:duration-500 pb-0 cursor-pointer"
+        >
+          BiFırsat
         </h1>
-      </div>
+      </Link>
 
       {/* Desktop Navigation */}
-      <div className="hidden md:flex space-x-8">
+      <div className="hidden md:flex space-x-12">
         {navItems.map((item) => (
           <Link
             key={item.id}
             to={item.to}
             smooth={true}
-            className="text-white font-medium text-lg   hover:shadow-yellow-900 hover:text-yellow-900 transition duration-300 hover:scale-110 cursor-pointer"
+            className="text-white font-medium text-lg hover:text-[#1a1a1a] rounded-full bg-none hover:bg-[#ffbf00]/40 hover:px-3
+             transition-all duration-500 hover:scale-110 cursor-pointer"
           >
             {item.text}
           </Link>
@@ -56,20 +68,26 @@ function NavBar() {
       {/* Mobile Navigation */}
       <div className="md:hidden relative">
         <button onClick={toggleMenu} className="text-3xl text-gray-500">
-          {isOpen ? <IoIosArrowDropleft color="#afaf87" /> : <IoIosArrowDropright color="#7f7f2b" />}
+          {isOpen ? (
+            <IoMdRemoveCircleOutline color="#7f7f2b" />
+          ) : (
+            <IoIosMenu color="#afaf87" />
+          )}
         </button>
 
         {/* Mobil Menü */}
         {isOpen && (
           <div
-            className={`absolute top-12 -right-5 bg-[#f39c12]/85 rounded-lg backdrop-blur-lg  shadow-2xl py-4 px-6 z-50 w-56 ${animateOut ? "menu-exit" : "menu-enter"}`}
+            className={`absolute top-12 -right-5 bg-[#333333]/85 rounded-lg backdrop-blur-lg  shadow-2xl py-4 px-6 z-50 w-56 ${
+              animateOut ? "menu-exit" : "menu-enter"
+            }`}
           >
             {navItems.map((item) => (
               <Link
                 key={item.id}
                 to={item.to}
                 smooth={true}
-                className="block text-black font-medium text-lg py-2 hover:text-yellow-500 transition duration-300 cursor-pointer"
+                className="block text-yellow-500 font-medium text-lg py-2 hover:text-yellow-500 transition duration-300 cursor-pointer"
                 onClick={toggleMenu}
               >
                 {item.text}

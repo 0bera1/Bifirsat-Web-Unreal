@@ -1,0 +1,50 @@
+
+  @keyframes metallicGlow {
+    0% {
+      color: #8a8a8a; /* Başlangıç rengi: Metalik gri */
+      text-shadow: 0 0 5px #8a8a8a, 0 0 15px #8a8a8a, 0 0 30px #8a8a8a; /* Metalik gri ışık */
+      transform: scale(1); /* Normal boyut */
+    }
+    25% {
+      color: #b8b8b8; /* Açık gümüş rengi */
+      text-shadow: 0 0 10px #b8b8b8, 0 0 20px #b8b8b8, 0 0 30px #b8b8b8, 0 0 40px #b8b8b8; /* Işıklı parlamalar */
+      transform: scale(1.05); /* Küçük büyüme */
+    }
+    50% {
+      color: #00b3b3; /* Mavi-yeşil metalik rengi */
+      text-shadow: 0 0 15px #00b3b3, 0 0 25px #00b3b3, 0 0 35px #00b3b3, 0 0 50px #00b3b3; /* Mavi-yeşil parıltı */
+      transform: scale(1.1); /* Biraz büyür */
+    }
+    75% {
+      color: #ffcc00; /* Altın rengi */
+      text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00, 0 0 40px #ffcc00, 0 0 50px #ffcc00; /* Altın parıltı */
+      transform: scale(1.05); /* Küçük büyüme */
+    }
+    100% {
+      color: #8a8a8a; /* Metalik gri rengi */
+      text-shadow: 0 0 5px #8a8a8a, 0 0 15px #8a8a8a, 0 0 30px #8a8a8a; /* Gri parıltı */
+      transform: scale(1); /* İlk boyutuna geri döner */
+    }
+  }
+  @keyframes slowGlow {
+    0% {
+      color: #333; /* Başlangıç rengi: Koyu gri/siyah */
+      text-shadow: 0 0 5px #333, 0 0 10px #333, 0 0 15px #333; /* Başlangıçtaki koyu gölge */
+    }
+    25% {
+      color: #fff; /* Beyaz renk */
+      text-shadow: 0 0 5px #414141, 0 0 30px #414141, 0 0 50px #414141; /* Beyaz ışık yansıması */
+    }
+    50% {
+      color: #333; /* Koyu gri/siyah rengi geri döner */
+      text-shadow: 0 0 5px #333, 0 0 30px #333, 0 0 50px #333; /* Gri parıltı */
+    }
+    75% {
+      color: #fff; /* Beyaz rengi tekrar devreye sokar */
+      text-shadow: 0 0 15px #414141, 0 0 40px #414141, 0 0 70px #414141; /* Beyaz ışığın artması */
+    }
+    100% {
+      color: #333; /* Yeniden koyu gri/siyah rengine döner */
+      text-shadow: 0 0 5px #333, 0 0 10px #333, 0 0 15px #333; /* Gölge tekrar koyulaşır */
+    }
+  }

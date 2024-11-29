@@ -18,6 +18,12 @@ import ss12Mobile from "../assets/app-ss/12.jpg";
 
 import { useState } from "react";
 
+import { FaAppStoreIos } from "react-icons/fa";
+import { FaGooglePlay } from "react-icons/fa";
+
+import { RxDoubleArrowRight,RxDoubleArrowLeft  } from "react-icons/rx";
+
+
 function MobilUygulama() {
   const images = [ss1, ss2, ss3, ss4, ss5]; // Desktop fotoğrafları
   const images2 = [
@@ -47,7 +53,8 @@ function MobilUygulama() {
   const handlePrev = () => {
     setCurrentIndex(
       (prevIndex) =>
-        (prevIndex - 1 +
+        (prevIndex -
+          1 +
           (window.innerWidth < 768 ? images2.length : images.length)) %
         (window.innerWidth < 768 ? images2.length : images.length)
     );
@@ -55,59 +62,85 @@ function MobilUygulama() {
 
   return (
     <div id="mobiluygulama" className="max-w-7xl mx-auto py-8 px-4">
-      <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">
-        Mobil Uygulamamız
+      <h2 className="text-3xl font-bold text-center text-[#ffbf00] mb-16">
+        Mobil Uygulamamız {"(Çok Yakında !)"}
       </h2>
       <div className="relative">
         {/* Image Container */}
-        <div className="overflow-hidden rounded-3xl w-full mx-auto">
+        <div className="overflow-hidden  lg:hover:scale-[1.02] transition duration-500 ease-in-out rounded-3xl w-full shadow-2xl shadow-black mx-auto">
           <div
-            className={`flex transition-all duration-1000  
+            className={`flex transition-all duration-1000 
                 ${window.innerWidth < 768 ? "space-x-9 ml-5" : ""}
                 `}
             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
           >
-            {(window.innerWidth < 768 ? images2 : images).map((image, index) => (
-              <img
-                key={index}
-                src={image}
-                alt={`Screenshot ${index + 1}`}
-                className={`w-full ${
-                  window.innerWidth < 768
-                    ? "h-[700px] object-cover rounded-[50px] mx-auto mb-4" // Mobilde daha büyük ve fotoğraflar arasındaki mesafeyi arttır
-                    : "h-full object-contain"
-                }`}
-              />
-            ))}
+            {(window.innerWidth < 768 ? images2 : images).map(
+              (image, index) => (
+                <img
+                  key={index}
+                  src={image}
+                  alt={`Screenshot ${index + 1}`}
+                  className={`w-full
+                    ${window.innerWidth < 768
+                      ? "h-[700px] object-cover rounded-[50px] mx-auto mb-4"
+                      : "h-full object-contain"
+                  }`}
+                />
+              )
+            )}
           </div>
         </div>
 
         {/* Navigation buttons */}
-        {window.innerWidth < 768 && currentIndex > 0 && ( // Only show Prev button on mobile when not on first image
+        {currentIndex > 0 && (
           <button
             onClick={handlePrev}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white bg-gray-800 p-4 lg:p-3 rounded-full opacity-75 hover:opacity-100 transition duration-300 ease-in-out"
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 hover:scale-150
+             text-white bg-gray-800 p-4 lg:p-3 rounded-full opacity-75 hover:opacity-100 
+             transition duration-300 ease-in-out hover:text-[#ffbf00]"
           >
-            &#60;
-          </button>
-        )}
-          {/* Navigation buttons */}
-          {window.innerWidth > 768 && currentIndex > 0 && ( // Only show Prev button on mobile when not on first image
-          <button
-            onClick={handlePrev}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white bg-gray-800 p-4 lg:p-3 rounded-full opacity-75 hover:opacity-100 transition duration-300 ease-in-out"
-          >
-            &#60;
+          <RxDoubleArrowLeft className="text-xl lg:text-2xl" />
           </button>
         )}
 
         <button
           onClick={handleNext}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white bg-gray-800 p-4 lg:p-3 rounded-full opacity-75 hover:opacity-100 transition duration-300 ease-in-out"
+          className="absolute right-4 hover:scale-150
+          top-1/2 transform -translate-y-1/2 text-white bg-gray-800 p-4 lg:p-3 rounded-full 
+          opacity-75 hover:opacity-100 transition duration-300 ease-in-out"
         >
-          &#62;
+          <RxDoubleArrowRight className="text-xl lg:text-2xl hover:text-[#ffbf00]" />
         </button>
       </div>
+
+      {/* App Store and Play Store buttons */}
+      <div className="flex justify-center items-center mt-14 space-x-5 lg:space-x-10">
+  <a
+    href="https://apps.apple.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <div className="border border-[#ffbf00] hover:border-black flex flex-row p-3 lg:p-6 rounded-xl transition duration-700 ease-in-out hover:bg-[#ffbf00] group">
+      <FaAppStoreIos className="lg:text-5xl text-8xl text-[#ffbf00] group-hover:text-black items-center justify-center" />
+      <h6 className="text-[#ffbf00] text-sm lg:text-lg font-bold items-center justify-center mt-4 ml-4 lg:mt-2 lg:ml-2 transition duration-700 ease-in-out group-hover:text-black">
+        Çok Yakında App Store&apos;da! {"(iOS)"}
+      </h6>
+    </div>
+  </a>
+  <a
+    href="https://play.google.com/store"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <div className="border border-[#ffbf00] hover:border-black flex flex-row p-3 lg:p-6 rounded-xl transition duration-700 ease-in-out hover:bg-[#ffbf00] group">
+      <FaGooglePlay className="lg:text-5xl text-8xl text-[#ffbf00] group-hover:text-black items-center justify-center" />
+      <h6 className="text-[#ffbf00] text-sm lg:text-lg font-bold items-center justify-center mt-4 ml-4 lg:mt-2 lg:ml-2 transition duration-700 ease-in-out group-hover:text-black">
+        Çok Yakında Play Store&apos;da! {"(Android)"}
+      </h6>
+    </div>
+  </a>
+</div>
+
     </div>
   );
 }
