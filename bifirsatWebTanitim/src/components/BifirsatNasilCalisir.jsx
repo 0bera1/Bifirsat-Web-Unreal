@@ -19,7 +19,7 @@ function BifirsatNasilCalisir() {
         <div className="flex justify-center items-center lg:space-x-12 mt-8 sm:flex-wrap space-x-8  sm:space-y-8">
         <div className="flex flex-col items-center bg-yellow-500 mt-auto p-6 rounded-full shadow-xl transform hover:scale-110 transition duration-500">
     <FaHandshake size={50} className="text-black" />
-    <p className="mt-2 text-center text-black text-sm lg:text-base">Yerel Müşterilerle Buluşma</p>
+    <p className="mt-2 text-center text-black text-sm lg:text-base">Hedef Müşterilerle Buluşma</p>
   </div>
           <div className="flex flex-col items-center bg-black p-6 rounded-full shadow-xl transform hover:scale-110 transition duration-500">
             <FaRegBuilding size={50} className="text-white" />
@@ -38,25 +38,16 @@ function BifirsatNasilCalisir() {
           Ne Yapmanız Gerekir?
         </h2>
         
-        <div className="space-y-12">
-          {/* Yereldekiler İçin */}
-          <div className="space-y-4">
-            <h3 className="text-2xl font-bold text-black sm:text-xl">Yereldekiler İçin</h3>
-            <p className="text-black lg:text-lg md:text-lg sm:text-base">
-              Henüz e-ticaret siteniz yoksa, bize mail yolu ile ulaşarak indiriminizi sunmanız yeterlidir. İsterseniz kampanya sürecinizi, destek ekibimizle birlikte en uygun şekilde oluşturabiliriz.
-            </p>
-          </div>
+        
 
           {/* E-Ticarette Olanlar İçin */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold text-black sm:text-xl">E-Ticarette Olanlar İçin</h3>
             <p className="text-black lg:text-lg md:text-lg sm:text-base">
-              E-ticaret siteniz varsa, API sistemi ile indirimlerinizi ve kampanyalarınızı güncel olarak Bifırsat&apos;a bağlayabiliriz. Henüz API sisteminiz yoksa, manuel olarak da girebiliriz ve API oluşturma sürecinde ekibimizden destek alabilirsiniz.
+              E-ticaret sitenizdeki, indirimlerinizi ve kampanyalarınızı API sistemi ile  güncel olarak Bifırsat&apos;a bağlayabiliriz. Henüz API sisteminiz yoksa, manuel olarak da girebiliriz ve API oluşturma sürecinde ekibimizden danışmanlık alabilirsiniz.
             </p>
           </div>
         </div>
       </div>
-    </div>
   );
 }
 

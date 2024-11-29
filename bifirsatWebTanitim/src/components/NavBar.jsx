@@ -23,30 +23,31 @@ function NavBar() {
 
   const navItems = [
     { id: 1, text: "Hakkımızda", to: "hakkimizda" },
+    { id: 5, text: "Mobil Uygulamamız", to: "mobiluygulama" },
     { id: 2, text: "Biz Kimiz?", to: "bizkimiz" },
     { id: 3, text: "Partnerimiz Olun", to: "partner" },
     { id: 4, text: "İletişim", to: "iletisim" },
-    { id: 5, text: "Mobil Uygulamamız", to: "mobiluygulama" },
+
   ];
 
   return (
     <nav
-      className="fixed top-0 left-0 right-0 bg-white/20 rounded-lg backdrop-blur-lg shadow-xl flex justify-between items-center h-20 
+      className="fixed top-0 left-0 right-0 bg-yellow-400/80 rounded-lg backdrop-blur-lg shadow-xl flex justify-between items-center h-20 
     max-w-full px-8 md:px-36 mx-auto z-50"
     >
       {/* Logo Section */}
       <Link
         to="top"
         smooth={true}
-        className="flex items-center justify-center space-x-5"
+        className="flex items-center justify-center space-x-5 rounded-2xl py-3 bg-gray-900 :bg-[#1a1a1a]/80 px-7"
       >
         <img src={icon} className="h-10 w-10 animate-bounce-slow" alt="icon" />
         <h1
-          className="text-2xl font-bold text-white  transition scale-110 hover:scale-125  duration-300 relative hover:text-yellow-400 
+          className="text-2xl font-bold text-gray-100  transition scale-110 hover:scale-125  duration-300 relative hover:text-yellow-400 
            after:bg-yellow-600 after:absolute after:h-[0.5px] after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:transition-all 
-           after:duration-500 pb-0 cursor-pointer"
+           after:duration-500 pb-0 cursor-pointer  "
         >
-          BiFırsat
+          bifırsat
         </h1>
       </Link>
 
@@ -57,7 +58,7 @@ function NavBar() {
             key={item.id}
             to={item.to}
             smooth={true}
-            className="text-white font-medium text-lg hover:text-[#1a1a1a] rounded-full bg-none hover:bg-[#ffbf00]/40 hover:px-3
+            className="text-gray-800 font-medium text-lg hover:text-yellow-400 rounded-full bg-none hover:bg-[#1a1a1a]/80 hover:px-5 
              transition-all duration-500 hover:scale-110 cursor-pointer"
           >
             {item.text}

@@ -62,8 +62,11 @@ function MobilUygulama() {
 
   return (
     <div id="mobiluygulama" className="max-w-7xl mx-auto py-8 px-4">
-      <h2 className="text-3xl font-bold text-center text-[#ffbf00] mb-16">
+      <h2 className="text-3xl font-bold text-center text-black mb-2">
         Mobil Uygulamamız {"(Çok Yakında !)"}
+      </h2>
+      <h2 className="text-xl font-bold text-center text-black mb-16">
+        * Görseller Temsilidir.
       </h2>
       <div className="relative">
         {/* Image Container */}
@@ -96,8 +99,8 @@ function MobilUygulama() {
           <button
             onClick={handlePrev}
             className="absolute left-4 top-1/2 transform -translate-y-1/2 hover:scale-150
-             text-white bg-gray-800 p-4 lg:p-3 rounded-full opacity-75 hover:opacity-100 
-             transition duration-300 ease-in-out hover:text-[#ffbf00]"
+             text-white bg-[#ffbf00] p-4 lg:p-3 rounded-full opacity-75 hover:opacity-100 
+             transition duration-300 ease-in-out hover:text-black"
           >
           <RxDoubleArrowLeft className="text-xl lg:text-2xl" />
           </button>
@@ -106,10 +109,10 @@ function MobilUygulama() {
         <button
           onClick={handleNext}
           className="absolute right-4 hover:scale-150
-          top-1/2 transform -translate-y-1/2 text-white bg-gray-800 p-4 lg:p-3 rounded-full 
+          top-1/2 transform -translate-y-1/2 text-white bg-[#ffbf00] p-4 lg:p-3 rounded-full 
           opacity-75 hover:opacity-100 transition duration-300 ease-in-out"
         >
-          <RxDoubleArrowRight className="text-xl lg:text-2xl hover:text-[#ffbf00]" />
+          <RxDoubleArrowRight className="text-xl lg:text-2xl hover:text-black" />
         </button>
       </div>
 
@@ -120,9 +123,9 @@ function MobilUygulama() {
     target="_blank"
     rel="noopener noreferrer"
   >
-    <div className="border border-[#ffbf00] hover:border-black flex flex-row p-3 lg:p-6 rounded-xl transition duration-700 ease-in-out hover:bg-[#ffbf00] group">
-      <FaAppStoreIos className="lg:text-5xl text-8xl text-[#ffbf00] group-hover:text-black items-center justify-center" />
-      <h6 className="text-[#ffbf00] text-sm lg:text-lg font-bold items-center justify-center mt-4 ml-4 lg:mt-2 lg:ml-2 transition duration-700 ease-in-out group-hover:text-black">
+    <div className="border border-black hover:border-[#ffbf00] flex flex-row p-3 lg:p-6 rounded-xl transition duration-700 ease-in-out hover:bg-black group">
+      <FaAppStoreIos className="lg:text-5xl text-8xl text-[black] group-hover:text-[#ffbf00] items-center justify-center" />
+      <h6 className="text-[black] text-sm lg:text-lg font-bold items-center justify-center mt-4 ml-4 lg:mt-2 lg:ml-2 transition duration-700 ease-in-out group-hover:text-[#ffbf00]">
         Çok Yakında App Store&apos;da! {"(iOS)"}
       </h6>
     </div>
@@ -132,9 +135,9 @@ function MobilUygulama() {
     target="_blank"
     rel="noopener noreferrer"
   >
-    <div className="border border-[#ffbf00] hover:border-black flex flex-row p-3 lg:p-6 rounded-xl transition duration-700 ease-in-out hover:bg-[#ffbf00] group">
-      <FaGooglePlay className="lg:text-5xl text-8xl text-[#ffbf00] group-hover:text-black items-center justify-center" />
-      <h6 className="text-[#ffbf00] text-sm lg:text-lg font-bold items-center justify-center mt-4 ml-4 lg:mt-2 lg:ml-2 transition duration-700 ease-in-out group-hover:text-black">
+    <div className="border border-black hover:border-black flex flex-row p-3 lg:p-6 rounded-xl transition duration-700 ease-in-out hover:bg-black group">
+      <FaGooglePlay className="lg:text-5xl text-8xl text-black group-hover:text-[#ffbf00] items-center justify-center" />
+      <h6 className="text-black text-sm lg:text-lg font-bold items-center justify-center mt-4 ml-4 lg:mt-2 lg:ml-2 transition duration-700 ease-in-out group-hover:text-[#ffbf00]">
         Çok Yakında Play Store&apos;da! {"(Android)"}
       </h6>
     </div>

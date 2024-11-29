@@ -37,7 +37,7 @@ function App() {
     <>
       <div id="top" className="  overflow-hidden">
         <NavBar />
-        <div className="mb-36">
+        <div className="mb-36 bg-[#ffbf00]">
           <HeroSection />
         </div>
         <div
@@ -54,12 +54,14 @@ function App() {
         <BifirsatNasilCalisir />
         <div
           className="mt-96 mb-96 bg-transparent  lg:w-auto lg:h-auto h-[800px] w-full 
-       lg:mx-32 rounded-3xl items-center justify-center px-2 lg:border-2 lg:border-[#ffbf00] py-16 lg:bg-black/50 lg:backdrop-blur-xl 
+       lg:mx-32 rounded-3xl items-center justify-center px-2 lg:border-2 lg:border-black py-16 lg:bg-[#ffbf00]/90 lg:backdrop-blur-xl 
        lg:shadow-2xl "
         >
           <MobilUygulama />
         </div>
+        <div className="px-40 py-40 bg-[#ffbf00]">
         <BizKimiz />
+        </div>
         <SizeUlasalim />
         <FooterB/>
       </div>
