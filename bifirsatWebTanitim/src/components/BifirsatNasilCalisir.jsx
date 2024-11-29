@@ -16,7 +16,7 @@ function BifirsatNasilCalisir() {
         </p>
         
         {/* İkonlar */}
-        <div className="flex justify-center items-center lg:space-x-12 mt-8 sm:flex-wrap space-x-8  sm:space-y-8">
+        <div className="flex justify-center items-center lg:space-x-12 mt-8 sm:flex-wrap space-x-5  sm:space-y-8">
         <div className="flex flex-col items-center bg-yellow-500 mt-auto p-6 rounded-full shadow-xl transform hover:scale-110 transition duration-500">
     <FaHandshake size={50} className="text-black" />
     <p className="mt-2 text-center text-black text-sm lg:text-base">Hedef Müşterilerle Buluşma</p>

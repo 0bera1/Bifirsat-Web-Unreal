@@ -38,11 +38,13 @@ function App() {
         </div>
         <div
           id="hakkimizda"
-          className="flex flex-col items-center px-4 md:px-8 lg:px-16 xl:mx-52 my-10"
+          className="flex flex-col items-center px-4 md:px-8 lg:px-4 xl:mx-52 my-10"
         >
           <Hakkinda />
           {isVisible && (
-            <Link to="top" smooth={true}>
+            <Link
+            style={{ zIndex: 1000 }}
+            to="top" smooth={true}>
               <FaAngleDoubleUp className="text-5xl transition-all duration-500 p-2 text-yellow-500 bg-none hover:bg-yellow-500 hover:text-[#1a1a1a] rounded-full fixed bottom-10 right-10 cursor-pointer" />
             </Link>
           )}

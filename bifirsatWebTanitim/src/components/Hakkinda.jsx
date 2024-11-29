@@ -4,7 +4,7 @@ import "./hakkinda.css";
 function Hakkinda() {
   return (
     <div
-      className="lg:space-y-10 items-center flex-col hover:scale-105 transition-transform duration-700 
+      className="lg:space-y-10 px-10 items-center flex-col hover:scale-105 transition-transform duration-700 
       flex pt-36 pb-36 lg:shadow-2xl justify-start min-h-screen bg-none bg-[#ffbf00] rounded-3xl "
     >
       <div className="relative bg-white/80 hover:scale-105 transition-transform duration-700 backdrop-blur-lg rounded-3xl shadow-2xl max-w-3xl p-10">
